@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Add New Operation
+          Добавить новую операцию
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Operation Information
+          Информация о операции
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -84,31 +84,32 @@
           <form class="form-horizontal bordered-group" role="form" action="{{ route('operation.save') }}" method="post">
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Patient</label>
+              <label class="col-sm-2 control-label">Пациент</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_id">
-                  <option value="1">Nazmul</option>
-                  <option value="2">Somrat</option>
+                  <option value="1">Хан</option>
+                  <option value="2">Барбос</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Operation Type</label>
+              <label class="col-sm-2 control-label">Тип операции</label>
               <div class="col-sm-8">
                 <select class="form-control" name="operationType_id">
-                  <option value="1">T4</option>
-                  <option value="2">C.B.C</option>
+                  <option value="1">Стерилизация</option>
+                  <option value="2">Коронарное шунтирование</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Select Doctor</label>
+              <label class="col-sm-2 control-label">Проводящий врач</label>
               <div class="col-sm-8">
                 <select class="form-control" name="doctor_id">
-                  <option value="1">T4</option>
-                  <option value="2">C.B.C</option>
+                  @foreach ($doctors as $doctor)
+                    <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                  @endforeach
                 </select>
               </div>
             </div>

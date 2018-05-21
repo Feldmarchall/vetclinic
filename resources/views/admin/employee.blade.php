@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Add New Employee
+          Добавить нового сотрудника
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Employee Information
+          Информация о сотруднике
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -84,75 +84,75 @@
           <form class="form-horizontal bordered-group" role="form" action="{{ route('employee.save') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Employee Type</label>
+              <label class="col-sm-2 control-label">Должность сотрудника</label>
               <div class="col-sm-8">
                 <select class="form-control" name="employee_type">
-                  <option value="doctor">Doctor</option>
-                  <option value="nurse">Nurse</option>
-                  <option value="accountant">Accountant</option>
-                  <option value="Lab Staff">Laboratory Staff</option>
-                  <option value="pharmacist">Pharmacist</option>
+                  <option value="doctor">Врач</option>
+                  <option value="nurse">Медсестра</option>
+                  <option value="accountant">Администратор</option>
+                  <option value="Lab Staff">Лаботант</option>
+                  {{--<option value="pharmacist">Pharmacist</option>--}}
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Name</label>
+              <label class="col-sm-2 control-label">Имя</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="name" placeholder="Name" value="{{ Request::old('name') }}" required>
+                <input type="text" class="form-control" name="name" placeholder="Имя" value="{{ Request::old('name') }}" required>
               </div>
             </div>
             
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Degree</label>
+              <label class="col-sm-2 control-label">Стаж</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="degree" placeholder="Degree" value="{{ Request::old('degree') }}" required>
+                <input type="text" class="form-control" name="degree" placeholder="Стаж" value="{{ Request::old('degree') }}" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Gender</label>
+              <label class="col-sm-2 control-label">Пол</label>
               <div class="col-sm-8"> 
                 <label class="radio-inline">
-                  <input type="radio" name="gender" id="inlineRadio1" value="Male"> Male
+                  <input type="radio" name="gender" id="inlineRadio1" value="Male"> Мужской
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="gender" id="inlineRadio2" value="Female"> Female
+                  <input type="radio" name="gender" id="inlineRadio2" value="Female"> Женский
                 </label>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Date of Birth</label>
+              <label class="col-sm-2 control-label">Дата рождения</label>
               <div class="col-sm-8">
                 <input type="date" class="form-control" data-provide="datepicker" name="birthDate">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Specialization</label>
+              <label class="col-sm-2 control-label">Специализация</label>
               <div class="col-sm-8">
                 <select class="form-control" name="specialist">
-                  <option value="1">Other</option>
-                  <option value="medicine">Medicine</option>
-                  <option value="orthopedics">Orthopedics</option>
-                  <option value="neurologiest">Neurologiest</option>
+                  <option value="1">Другая</option>
+                  <option value="medicine">Терапевтия</option>
+                  <option value="orthopedics">Диагностика</option>
+                  <option value="neurologiest">Стационар</option>
                 </select>
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="col-sm-2 control-label">Visiting Charge</label>
-              <div class="col-sm-8">
-                <input type="number" class="form-control" name="charge" placeholder="visiting charge" value="{{ Request::old('charge') }}">
-              </div>
-            </div>
+            {{--<div class="form-group">--}}
+              {{--<label class="col-sm-2 control-label">Visiting Charge</label>--}}
+              {{--<div class="col-sm-8">--}}
+                {{--<input type="number" class="form-control" name="charge" placeholder="visiting charge" value="{{ Request::old('charge') }}">--}}
+              {{--</div>--}}
+            {{--</div>--}}
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Mobile Number</label> 
+              <label class="col-sm-2 control-label">Телефон</label>
               <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="^\d{11}$" required name="mobile" placeholder="(format: xxxxxxxxxxx)" name="mobile">
+                <input class="form-control" type="tel" pattern="^\d{11}$" required name="mobile" placeholder="(формат: xxx-xxx-xxx-xx)" name="mobile">
               </div>
             </div>
 
@@ -164,21 +164,21 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Home Address</label>
+              <label class="col-sm-2 control-label">Домашний адрес</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="hAddress" placeholder="Home Address" value="{{ Request::old('hAddress') }}" required>
+                <input type="text" class="form-control" name="hAddress" placeholder="Домашний адрес" value="{{ Request::old('hAddress') }}" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Office Address</label>
+              <label class="col-sm-2 control-label">Адрес в клинике</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="oAddress" placeholder="Office Address" value="{{ Request::old('oAddress') }}" required>
+                <input type="text" class="form-control" name="oAddress" placeholder="Адрес в клинике" value="{{ Request::old('oAddress') }}" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Upload Image</label>
+              <label class="col-sm-2 control-label">Фотография </label>
               <div class="col-sm-8">
                 <input type="file" name="image">
               </div>
@@ -186,7 +186,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Add Employee</button>
+                <button type="submit" class="btn btn-success">Добавить сотрудника</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>

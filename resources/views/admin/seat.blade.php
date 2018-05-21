@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Add New Seat
+          Добавить новую палату
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Seat Information
+          Информация о палатах
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -84,7 +84,7 @@
           <form class="form-horizontal bordered-group" role="form" action="{{ route('seat.save') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Seat No.</label>
+              <label class="col-sm-2 control-label">Палата No.</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" name="seatNo" placeholder="Seat No" value="{{ Request::old('seatNo') }}" required>
               </div>
@@ -102,37 +102,37 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Rent/day</label>
+              <label class="col-sm-2 control-label">Стоимость/в день</label>
               <div class="col-sm-8">
                 <input type="number" class="form-control" data-provide="datepicker" name="rent">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Status</label>
+              <label class="col-sm-2 control-label">Статус</label>
               <div class="col-sm-8">
                 <select class="form-control" name="status">
-                  <option value="empty">Empty</option>
-                  <option value="full">Full</option>
+                  <option value="empty">Свободная</option>
+                  <option value="full">Занятая</option>
                 </select>
               </div>
             </div>
 
              <div class="form-group">
-              <label class="col-sm-2 control-label">Type</label>
+              <label class="col-sm-2 control-label">Тип</label>
               <div class="col-sm-8"> 
                 <label class="radio-inline">
-                  <input type="radio" name="seatType" id="inlineRadio1" value="general"> General
+                  <input type="radio" name="seatType" id="inlineRadio1" value="general"> Общая
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="seatType" id="inlineRadio2" value="cabin"> Cabin
+                  <input type="radio" name="seatType" id="inlineRadio2" value="cabin"> Индивидуальная
                 </label>
               </div>
             </div>
 
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Upload Image</label>
+              <label class="col-sm-2 control-label">Фотография</label>
               <div class="col-sm-8">
                 <input type="file" name="image">
               </div>
@@ -140,7 +140,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Add Seat</button>
+                <button type="submit" class="btn btn-success">Добавить палату</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>

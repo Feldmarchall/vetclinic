@@ -7,6 +7,7 @@ use App\OperationType;
 use Illuminate\Support\Facades\Input;
 use File;
 use App\Operation;
+use App\Employee;
 class OperationController extends Controller
 {
     public function operationTypeIndex ()
@@ -67,7 +68,8 @@ class OperationController extends Controller
     
     public function getIndex ()
     {
-        return view('admin.operation');
+        $doctor = Employee::orderBy('created_at' , 'desc')->where('employee_type' , 'doctor')->get();
+        return view('admin.operation', ['doctors' => $doctor]);
     }
 
     public function save(Request $request)

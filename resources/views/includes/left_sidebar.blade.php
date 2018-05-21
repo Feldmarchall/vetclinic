@@ -65,7 +65,7 @@
               </li>
               <li>
                 <a href="{{ route('patient.list' , ['patient' => 'out']) }}">
-                  <span>Вылеченные пациенты</span>
+                  <span>Госпитализированные пациенты</span>
                 </a>
               </li>
               <li>
@@ -90,7 +90,7 @@
               </li>
               <li>
                 <a href="{{ route('employee.list' , ['employee' => 'doctor']) }}">
-                  <span>Список докторов</span>
+                  <span>Список врачей</span>
                 </a>
               </li>
               <li>

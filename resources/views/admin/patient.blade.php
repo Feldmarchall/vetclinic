@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Add New Patient
+          Добавить нового пациента
         </p>
       </li>
     </ul>
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Patient Information
+          Данные пациента
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -84,43 +84,43 @@
           <form class="form-horizontal bordered-group" role="form" action="{{ route('patient.save') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Patient Type</label>
+              <label class="col-sm-2 control-label">Тип пациента</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_type">
-                  <option value="1">Out Patient</option>
-                  <option value="2">Admit Patient</option>
+                  <option value="1">Новый пациент</option>
+                  <option value="2">Госпитализированный пациент</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Patient ID</label>
+              <label class="col-sm-2 control-label">ID пациента</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" value="{{ $lastID }}" disabled>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Name</label>
+              <label class="col-sm-2 control-label">Кличка питомца</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="name" placeholder="Name" value="{{ Request::old('name') }}" required>
+                <input type="text" class="form-control" name="name" placeholder="Кличка питомца" value="{{ Request::old('name') }}" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Gender</label>
+              <label class="col-sm-2 control-label">Пол</label>
               <div class="col-sm-8"> 
                 <label class="radio-inline">
-                  <input type="radio" name="gender" id="inlineRadio1" value="Male"> Male
+                  <input type="radio" name="gender" id="inlineRadio1" value="Male"> Мужской
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" name="gender" id="inlineRadio2" value="Female"> Female
+                  <input type="radio" name="gender" id="inlineRadio2" value="Female"> Женский
                 </label>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Date of Birth</label>
+              <label class="col-sm-2 control-label">Дата рождаения</label>
               <div class="col-sm-8">
                 <input type="date" class="form-control" data-provide="datepicker" name="birthDate">
               </div>
@@ -143,14 +143,14 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Symptoms</label>
+              <label class="col-sm-2 control-label">Симптомы</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="symptoms" placeholder="Symptoms" value="{{ Request::old('symptoms') }}" required>
+                <input type="text" class="form-control" name="symptoms" placeholder="Симптомы" value="{{ Request::old('symptoms') }}" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Assign Doctor</label>
+              <label class="col-sm-2 control-label">Лечащий врач</label>
               <div class="col-sm-8">
                 <select class="form-control" name="doctor_id">                  
                   @foreach ($doctors as $doctor)
@@ -161,7 +161,7 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Assign Seat</label>
+              <label class="col-sm-2 control-label">Размещение</label>
               <div class="col-sm-8">
                 <select class="form-control" name="seat_id">
                   @foreach ($seats as $seat)
@@ -172,9 +172,9 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Mobile Number</label> 
+              <label class="col-sm-2 control-label">Телефон владельца</label>
               <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="^\d{11}$" required name="mobile" placeholder="(format: xxxxxxxxxxx)" name="mobile">
+                <input class="form-control" type="tel" pattern="^\d{11}$" required name="mobile" placeholder="(формат: xxx-xxx-xxx-xx)" name="mobile">
               </div>
             </div>
 
@@ -186,15 +186,15 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Address</label>
+              <label class="col-sm-2 control-label">Адрес владельца</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="address" placeholder="Address" value="{{ Request::old('address') }}" required>
+                <input type="text" class="form-control" name="address" placeholder="Адрес владельца" value="{{ Request::old('address') }}" required>
               </div>
             </div>
 
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Upload Image</label>
+              <label class="col-sm-2 control-label">Фотография питомца</label>
               <div class="col-sm-8">
                 <input type="file" name="image">
               </div>
@@ -202,7 +202,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Add Patient</button>
+                <button type="submit" class="btn btn-success">Добавить пациента</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>
