@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Input;
 use File;
 use App\Operation;
 use App\Employee;
+use App\Seat;
+use App\Patient;
 class OperationController extends Controller
 {
     public function operationTypeIndex ()
@@ -68,8 +70,10 @@ class OperationController extends Controller
     
     public function getIndex ()
     {
+        $patient = Patient::orderBy('created_at' , 'desc')->get();
         $doctor = Employee::orderBy('created_at' , 'desc')->where('employee_type' , 'doctor')->get();
-        return view('admin.operation', ['doctors' => $doctor]);
+        $seat = Seat::orderBy('created_at' , 'desc')->where('status' , 'empty')->get();
+        return view('admin.operation', ['doctors' => $doctor, 'seats' => $seat, 'patients' => $patient]);
     }
 
     public function save(Request $request)
@@ -125,7 +129,15 @@ class OperationController extends Controller
     public function viewList($operationFloor = null)
     {
         $operation = Operation::orderBy('created_at' , 'desc')->paginate(50);
-        return view('admin.operation_list' , ['operations' => $operation]);
+
+//        echo '<pre>';
+//        var_dump(Operation::orderBy('created_at' , 'desc')->get()->toArray());  // <---- or toJson()
+//        echo '</pre>';
+//        die();
+        $patient = Patient::orderBy('created_at' , 'desc')->get();
+        $doctor = Employee::orderBy('created_at' , 'desc')->where('employee_type' , 'doctor')->get();
+        $seat = Seat::orderBy('created_at' , 'desc')->where('status' , 'empty')->get();
+        return view('admin.operation_list' , ['operations' => $operation, 'doctors' => $doctor, 'seats' => $seat, 'patients' => $patient]);
     }
 
     public function delete(Request $request)

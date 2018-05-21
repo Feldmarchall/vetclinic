@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          View All Operation's
+          Список всех операций
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Operation Information
+          Информация о операции
         </div>
         <div class="panel-body">
         @if(Session::has('success'))
@@ -77,19 +77,19 @@
           <thead>
             <tr>
               <th>No.</th>
-              <th>operation Name</th>
-              <th>View</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th>Тип операции</th>
+              <th>Просмотреть</th>
+              <th>Редактировать</th>
+              <th>Удалить</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th>No.</th>
-              <th>operation Name</th>
-              <th>View</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th>Тип операции</th>
+              <th>Просмотреть</th>
+              <th>Редактировать</th>
+              <th>Удалить</th>
             </tr>          
             </tfoot>
           <tbody>
@@ -98,34 +98,34 @@
               <tr>
               <td><?php echo $i; ?></td>
               <td>{{ $operation->operationNo or 'T4' }}</td>
-              <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Details</button></a></td>
+              <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
               <div class="modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h4 class="modal-title">Operation's Information</h4>
+                      <h4 class="modal-title">Информация о операции</h4>
                     </div>
                     <div class="modal-body">
                       <div class="row">
                         <div class="col-xs-1"></div>
                         <div class="col-xs-4">
-                          <p>Operation Name</p>
-                          <p>Patient Name</p>
-                          <p>Selected Doctor</p>
-                          <p>Selected Seat</p>
-                          <p>O.T Date</p>
-                          <p>O.T Time</p>
-                          <p>O.T Charge</p>
-                          <p>Description</p>                 
+                          <p>Тип операции</p>
+                          <p>Пациент</p>
+                          <p>Проводящий врач</p>
+                          <p>Операционная</p>
+                          <p>Дата проведения</p>
+                          <p>Время проведения</p>
+                          <p>Цена операции</p>
+                          <p>Описание</p>
                         </div>
                         <div class="col-xs-7">
-                          <p> : {{ $operation->name or 'T4' }}</p>
-                          <p> : {{ $operation->patien or 'Somrat' }}</p>
-                          <P> : {{ $operation->doctor or 'Mr. Nazmul' }}</P>
-                          <p> : {{ $operation->seat or '102' }}</p>
-                          <p> : {{ $operation->date or '2016:20:06' }}</p>
-                          <p> : {{ $operation->time or '05:06:20' }}</p>
+                          <p> : {{ $operation->name}}</p>
+                          <p> : {{ $operation->patient}}</p>
+                          <P> : {{ $operation->doctor}}</P>
+                          <p> : {{ $operation->seat}}</p>
+                          <p> : {{ $operation->date}}</p>
+                          <p> : {{ $operation->time}}</p>
                           <p> : {{ $operation->charge or '2000' }}</p>
                           <p> : {{ $operation->description }}</p>                         
                         </div>
@@ -154,8 +154,9 @@
               <label class="col-sm-3 control-label">Patient</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_id">
-                  <option value="1">Nazmul</option>
-                  <option value="2">Somrat</option>
+                  @foreach ($patients as $patient)
+                    <option value="{{ $patient->id }}">{{ $patient->name }}</option>
+                  @endforeach
                 </select>
               </div>
             </div>

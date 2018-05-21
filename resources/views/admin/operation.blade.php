@@ -87,8 +87,9 @@
               <label class="col-sm-2 control-label">Пациент</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_id">
-                  <option value="1">Хан</option>
-                  <option value="2">Барбос</option>
+                  @foreach ($patients as $patient)
+                    <option value="{{ $patient->id }}">{{ $patient->name }}</option>
+                  @endforeach
                 </select>
               </div>
             </div>
@@ -115,31 +116,32 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Select Seat</label>
+              <label class="col-sm-2 control-label">Операционная</label>
               <div class="col-sm-8">
                 <select class="form-control" name="seat_id">
-                  <option value="1">ICU - 101</option>
-                  <option value="2">ICU - 202</option>
+                  @foreach ($seats as $seat)
+                    <option value="{{ $seat->id }}">{{ $seat->seatFloor}} -- {{ $seat->seatNo}}</option>
+                  @endforeach
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">O.T Date</label>
+              <label class="col-sm-2 control-label">Дата проведения</label>
               <div class="col-sm-8">
-                <input type="text" name="date" class="form-control" placeholder="Format : Y-M-D">
+                <input type="text" name="date" class="form-control" placeholder="формат : Y-M-D">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">O.T Time</label>
+              <label class="col-sm-2 control-label">Время проведения</label>
               <div class="col-sm-8">
-                <input type="text" name="time" class="form-control" placeholder="Format : H:M:S">
+                <input type="text" name="time" class="form-control" placeholder="формат : H:M:S">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Description</label>
+              <label class="col-sm-2 control-label">Описание</label>
               <div class="col-sm-8">
                 <textarea class="form-control" rows="5" name="description"></textarea>
               </div>
@@ -147,7 +149,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Add Operation</button>
+                <button type="submit" class="btn btn-success">Добавить операцию</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>
