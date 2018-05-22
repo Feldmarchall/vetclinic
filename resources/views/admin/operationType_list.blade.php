@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          View All Operation Name
+          Список всех операций
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          The Name all the type of Operation
+          Название всех типов операций
         </div>
         <div class="panel-body">
         @if(Session::has('success'))
@@ -77,19 +77,19 @@
           <thead>
             <tr>
               <th>No.</th>
-              <th>Name</th>
-              <th>cost</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th>Название операции</th>
+              <th>Стоимость</th>
+              <th>Редактировать</th>
+              <th>Удалить</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th>No.</th>
-              <th>Name</th>
-              <th>cost</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th>Название операции</th>
+              <th>Стоимость</th>
+              <th>Редактировать</th>
+              <th>Удалить</th>
             </tr>         
           </tfoot>
           <tbody>
@@ -100,35 +100,35 @@
               <td>{{ $operationType->name }}</td>
               <td>{{ $operationType->cost }} Tk.</td>
               
-              <td><a data-toggle="modal" data-target="#edit<?php echo $i; ?>" href=""><button type="button" class="btn btn-info">Edit</button></a></td>
+              <td><a data-toggle="modal" data-target="#edit<?php echo $i; ?>" href=""><button type="button" class="btn btn-info">Редактировать</button></a></td>
               <div class="modal" id="edit<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h4 class="modal-title">Edit Information</h4>
+                      <h4 class="modal-title">Редактировать информацию</h4>
                     </div>
                     <div class="modal-body">
                       <div class="row mb25">
                       <form class="form-horizontal bordered-group" role="form" action="{{ route('operationType.update') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">Name</label>
+              <label class="col-sm-3 control-label">Занвание</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" name="name" placeholder="operationType No" value="{{ Request::old('name') ? Request::old('operationTypeNo') : isset($operationType) ? $operationType->name : '' }} " required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">Cost</label>
+              <label class="col-sm-3 control-label">Стоимость</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" name="cost" value="{{ Request::old('cost') ? Request::old('cost') : isset($operationType) ? $operationType->cost : '' }} ">
               </div>
             </div>
 
             <div class="modal-footer no-border clear">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-success">Update</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+              <button type="submit" class="btn btn-success">Обновить</button>
               <input type="hidden" name="_token" value="{{ Session::token() }}">
               <input type="hidden" name="operationType_id" value="{{ $operationType->id }}">
             </div>
@@ -138,21 +138,21 @@
                </form>
               
 
-              <td><a data-toggle="modal" data-target="#delete<?php echo $i; ?>" href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
+              <td><a data-toggle="modal" data-target="#delete<?php echo $i; ?>" href=""><button type="button" class="btn btn-danger">Удалить</button></a></td>
               <div class="modal" id="delete<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Delete the name of Information</h4>
+                    <h4 class="modal-title">Удалить информацию</h4>
                   </div>
                   <div class="modal-body">
-                      Are you sure ?
+                      Вы уверенны ?
                   </div>
                   <form action="{{ route('operationType.delete') }}" method="">
                   <div class="modal-footer no-border">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                    <button type="submit" class="btn btn-primary">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Нет</button>
+                    <button type="submit" class="btn btn-primary">Да</button>
                     <input type="hidden" name="operationType_id" value="{{ $operationType->id }}">
                   </div>
                   </form>

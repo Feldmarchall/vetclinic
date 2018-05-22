@@ -31,7 +31,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Create New Invoice
+          Создать новый бланк
         </p>
       </li>
     </ul>
@@ -68,7 +68,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Invoice Creator
+          Бланк расчета
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -90,45 +90,45 @@
     <form class="form-horizontal bordered-group" role="form" action="" method="post" enctype="multipart/form-data">
 
           <div class="form-group">
-              <label class="col-sm-2 control-label">Invoice ID</label>
+              <label class="col-sm-2 control-label">ID</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" value="2" disabled>
               </div>
             </div>
           
           <div class="form-group">
-              <label class="col-sm-2 control-label">Invoice Title</label>
+              <label class="col-sm-2 control-label">Заголовок расчета</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Patient</label>
+              <label class="col-sm-2 control-label">Пациент</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_type">
-                  <option value="1">Out Patient</option>
-                  <option value="2">Admit Patient</option>
+                  <option value="1">Новый пациент</option>
+                  <option value="2">Госпитализированный пациент</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Date</label>
+              <label class="col-sm-2 control-label">Дата</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" data-provide="datepicker" name="Date">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Medicine Charge</label>
+              <label class="col-sm-2 control-label">Медицинские услуги</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control calculate" id="medicine" name="medicine" value="0" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Service Charge</label>
+              <label class="col-sm-2 control-label">Сервисные услуги</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control calculate" id="service" name="service" value="0" required>
               </div>
@@ -136,54 +136,54 @@
 
             <div class="row col-md-6 pull-right">
       <div class="form-group form-inline">
-        <label class="col-sm-4" >Subtotal: &nbsp;</label>
+        <label class="col-sm-4" >Итого Услуг: &nbsp;</label>
         <div class="input-group col-sm-6">
           <div class="input-group-addon">Tk.</div>
-          <input name="subtotal" type="number" class="form-control" id="subTotal" placeholder="Subtotal">
+          <input name="subtotal" type="number" class="form-control" id="subTotal" placeholder="Итого Услуг">
         </div>
       </div>
       <div class="form-group form-inline">
-        <label class="col-sm-4">Percent: &nbsp;</label>
+        <label class="col-sm-4">Процент: &nbsp;</label>
         <div class="input-group col-sm-6">
           <div class="input-group-addon">Tk.</div>
-          <input name="percent" type="number" class="form-control" id="tax" placeholder="Percent">
+          <input name="percent" type="number" class="form-control" id="tax" placeholder="Процент">
               <div class="input-group-addon">%</div>
         </div>
       </div>
-      <div class="form-group form-inline">
-        <label class="col-sm-4">Percent Amount: &nbsp;</label>
-        <div class="input-group col-sm-6">
-          <div class="input-group-addon">Tk.</div>
-          <input name="percent_amount" type="text" class="form-control" id="taxAmount" placeholder="Percent">          
-        </div>
-      </div>
+      {{--<div class="form-group form-inline">--}}
+        {{--<label class="col-sm-4">Percent Amount: &nbsp;</label>--}}
+        {{--<div class="input-group col-sm-6">--}}
+          {{--<div class="input-group-addon">Tk.</div>--}}
+          {{--<input name="percent_amount" type="text" class="form-control" id="taxAmount" placeholder="Percent">          --}}
+        {{--</div>--}}
+      {{--</div>--}}
 
+      {{--<div class="form-group form-inline">--}}
+        {{--<label class="col-sm-4">Without Percent: &nbsp;</label>--}}
+        {{--<div class="input-group col-sm-6">--}}
+          {{--<div class="input-group-addon">Tk.</div>--}}
+          {{--<input name="without_percent" type="text" class="form-control" id="totalAftertax" placeholder="Without Percen">--}}
+        {{--</div>--}}
+      {{--</div>--}}
       <div class="form-group form-inline">
-        <label class="col-sm-4">Without Percent: &nbsp;</label>
-        <div class="input-group col-sm-6">
-          <div class="input-group-addon">Tk.</div>
-          <input name="without_percent" type="text" class="form-control" id="totalAftertax" placeholder="Without Percen">
-        </div>
-      </div>
-      <div class="form-group form-inline">
-        <label class="col-sm-4">Discount Amount: &nbsp;</label>
+        <label class="col-sm-4">Размер скидки: &nbsp;</label>
         <div class="input-group col-sm-6">
           <div class="input-group-addon">Tk.</div>
           <input name="discount_amount" type="number" class="form-control" id="discount" value="0">
         </div>
       </div>
       <div class="form-group form-inline">
-        <label class="col-sm-4"><button type="button" id="total" class="btn btn-primary">Total</button></label>
+        <label class="col-sm-4"><button type="button" id="total" class="btn btn-primary">Всего</button></label>
         <div class="input-group col-sm-6">
           <div class="input-group-addon">Tk.</div>
-          <input name="total_paid" type="number" class="form-control" id="totalAmount" placeholder="Total">
+          <input name="total_paid" type="number" class="form-control" id="totalAmount" placeholder="Всего">
         </div>
       </div>
 
       <div class="form-group">        
       <label class="col-sm-4"></label>  
       <div class="input-group col-sm-6">
-      <input type=submit name="invoice" value="Add Invoice" class="btn btn-success btn-lg btn-block">
+      <input type=submit name="invoice" value="Добавить бланк" class="btn btn-success btn-lg btn-block">
       <input type="hidden" name="_token" value="{{ Session::token() }}">
       </div>
      

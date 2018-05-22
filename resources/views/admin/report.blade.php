@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Add New Report
+          Добавить новую услугу
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Report Information
+          Игфрмация о отчете
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -84,34 +84,34 @@
           <form class="form-horizontal bordered-group" role="form" action="{{ route('report.save') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Patient</label>
+              <label class="col-sm-2 control-label">Пациент</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_id">
-                  <option value="1">Nazmul</option>
-                  <option value="2">Somrat</option>
+                  <option value="1">Барбос</option>
+                  <option value="2">Хан</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Report Type</label>
+              <label class="col-sm-2 control-label">Тип услуги</label>
               <div class="col-sm-8">
                 <select class="form-control" name="reportType_id">
-                  <option value="1">T4</option>
-                  <option value="2">C.B.C</option>
+                  <option value="1">Диагностика</option>
+                  <option value="2">Стерилизапция</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Description</label>
+              <label class="col-sm-2 control-label">Описание</label>
               <div class="col-sm-8">
                 <textarea class="form-control" rows="5" name="description"></textarea>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Upload Documents</label>
+              <label class="col-sm-2 control-label">Фотография</label>
               <div class="col-sm-8">
                 <input type="file" name="image">
               </div>
@@ -119,7 +119,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Add Report</button>
+                <button type="submit" class="btn btn-success">Добавить услугу</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>

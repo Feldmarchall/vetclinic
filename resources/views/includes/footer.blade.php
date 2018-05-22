@@ -4,7 +4,7 @@
       <nav class="footer-right">
         <ul class="nav">
           <li>
-            <a href="javascript:;">Feedback</a>
+            <a href="javascript:;"></a>
           </li>
           <li>
             <a href="javascript:;" class="scroll-up">
@@ -17,14 +17,13 @@
       <nav class="footer-left">
         <ul class="nav">
           <li>
-            <a href="javascript:;">Copyright <i class="fa fa-copyright"></i> <span>Urban</span> 2015. All rights reserved</a>
+            {{--<a href="javascript:;">Copyright <i class="fa fa-copyright"></i> <span>Vetmed</span> 2018</a>--}}
           </li>
           <li>
-            <a href="javascript:;">Careers</a>
+            <a href="javascript:;"></a>
           </li>
           <li>
             <a href="javascript:;">
-                Privacy Policy
             </a>
           </li>
         </ul>

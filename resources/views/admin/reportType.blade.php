@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav hidden-xs">
       <li>
         <p class="navbar-text">
-          Add New Name of Report
+          Добавить новый тип отчета
         </p>
       </li>
     </ul>
@@ -41,10 +41,10 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a href="{{ route('admin.index') }}">Dashboard</a>
+            <a href="{{ route('admin.index') }}">Панель</a>
           </li>
           <li>
-            <a href="signin.html">Logout</a>
+            <a href="signin.html">Выйти</a>
           </li>
         </ul>
 
@@ -63,7 +63,7 @@
   <div class="row">
     <div class="panel mb25">
         <div class="panel-heading border">
-          Report Name Information
+          Информация о отчете
         </div>
         <div class="panel-body">
         <div class="col-lg-12">
@@ -84,15 +84,15 @@
           <form class="form-horizontal bordered-group" role="form" action="{{ route('reportType.save') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Report Name</label>
+              <label class="col-sm-2 control-label">Название услуги</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="name" placeholder="Report Name" value="{{ Request::old('name') }}" required>
+                <input type="text" class="form-control" name="name" placeholder="Название услуги" value="{{ Request::old('name') }}" required>
               </div>
             </div>
 
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Report Cost</label>
+              <label class="col-sm-2 control-label">Цена услуги</label>
               <div class="col-sm-8">
                 <input type="text" class="form-control" name="cost">
               </div>
@@ -100,7 +100,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Add Name</button>
+                <button type="submit" class="btn btn-success">Добавить отчет</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>

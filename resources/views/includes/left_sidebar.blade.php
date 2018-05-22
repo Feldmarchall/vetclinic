@@ -147,23 +147,23 @@
           <li>
             <a href="javascript:;">
               <i class="fa fa-map-marker"></i>
-              <span>Отчеты</span>
+              <span>Услуги клиники</span>
               {{-- <span class="label label-success pull-right">2</span> --}}
             </a>
             <ul class="sub-menu">
               <li>
                 <a href="{{ route('report.index') }}">
-                  <span>Создать отчет</span>
+                  <span>Создать услугу</span>
                 </a>
               </li>
               <li>
                 <a href="{{ route('report.list') }}">
-                  <span>Список отчетов</span>
+                  <span>Список услуг</span>
                 </a>
               </li>
               <li>
                 <a href="{{ route('reportType.index') }}">
-                  <span>Создать новый тип отчета</span>
+                  <span>Создать новый тип услуги</span>
                 </a>
               </li>
               <li>
@@ -228,50 +228,50 @@
           <!-- /Invoice -->
 
           <!-- menu levels -->
-          <li>
-            <a href="javascript:;">
-              <i class="fa fa-level-down"></i>
-              <span>Menu Levels</span>
-            </a>
-            <ul class="sub-menu">
-              <li>
-                <a href="javascript:;">
-                  <i class="toggle-accordion"></i>
-                  <span>Level 1.1</span>
-                </a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="javascript:;">
-                      <i class="toggle-accordion"></i>
-                      <span>Level 2.1</span>
-                    </a>
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="javascript:;">
-                          <span>Level 3.1</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span>Level 3.2</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="javascript:;">
-                      <span>Level 2.2</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span>Level 1.2</span>
-                </a>
-              </li>
-            </ul>
-          </li>
+          {{--<li>--}}
+            {{--<a href="javascript:;">--}}
+              {{--<i class="fa fa-level-down"></i>--}}
+              {{--<span>Menu Levels</span>--}}
+            {{--</a>--}}
+            {{--<ul class="sub-menu">--}}
+              {{--<li>--}}
+                {{--<a href="javascript:;">--}}
+                  {{--<i class="toggle-accordion"></i>--}}
+                  {{--<span>Level 1.1</span>--}}
+                {{--</a>--}}
+                {{--<ul class="sub-menu">--}}
+                  {{--<li>--}}
+                    {{--<a href="javascript:;">--}}
+                      {{--<i class="toggle-accordion"></i>--}}
+                      {{--<span>Level 2.1</span>--}}
+                    {{--</a>--}}
+                    {{--<ul class="sub-menu">--}}
+                      {{--<li>--}}
+                        {{--<a href="javascript:;">--}}
+                          {{--<span>Level 3.1</span>--}}
+                        {{--</a>--}}
+                      {{--</li>--}}
+                      {{--<li>--}}
+                        {{--<a href="javascript:;">--}}
+                          {{--<span>Level 3.2</span>--}}
+                        {{--</a>--}}
+                      {{--</li>--}}
+                    {{--</ul>--}}
+                  {{--</li>--}}
+                  {{--<li>--}}
+                    {{--<a href="javascript:;">--}}
+                      {{--<span>Level 2.2</span>--}}
+                    {{--</a>--}}
+                  {{--</li>--}}
+                {{--</ul>--}}
+              {{--</li>--}}
+              {{--<li>--}}
+                {{--<a href="javascript:;">--}}
+                  {{--<span>Level 1.2</span>--}}
+                {{--</a>--}}
+              {{--</li>--}}
+            {{--</ul>--}}
+          {{--</li>--}}
           <!-- menu levels -->
         </ul>
       </nav>

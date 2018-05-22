@@ -97,7 +97,7 @@
             @foreach ($operations as $operation)
               <tr>
               <td><?php echo $i; ?></td>
-              <td>{{ $operation->operationNo or 'T4' }}</td>
+              <td>{{ $operation->operationNo or 'Стерилизация' }}</td>
               <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
               <div class="modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
@@ -120,19 +120,19 @@
                           <p>Описание</p>
                         </div>
                         <div class="col-xs-7">
-                          <p> : {{ $operation->name}}</p>
-                          <p> : {{ $operation->patient}}</p>
-                          <P> : {{ $operation->doctor}}</P>
-                          <p> : {{ $operation->seat}}</p>
-                          <p> : {{ $operation->date}}</p>
-                          <p> : {{ $operation->time}}</p>
+                          <p> : {{ $operation->name or 'Стерилизация'}}</p>
+                          <p> : {{ $operation->patient or 'Барбос'}}</p>
+                          <P> : {{ $operation->doctor or 'Маленков И.В.'}}</P>
+                          <p> : {{ $operation->seat or 'Палата №4'}}</p>
+                          <p> : {{ $operation->date or '24.05.18'}}</p>
+                          <p> : {{ $operation->time or '11 00'}}</p>
                           <p> : {{ $operation->charge or '2000' }}</p>
-                          <p> : {{ $operation->description }}</p>                         
+                          <p> : {{ $operation->description or 'Стерилизация питомца' }}</p>
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer no-border">
-                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
                     </div>
                   </div>
                 </div>
@@ -144,14 +144,14 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h4 class="modal-title">Edit Information</h4>
+                      <h4 class="modal-title">Редактировать информацию</h4>
                     </div>
                     <div class="modal-body">
                       <div class="row mb25">
                       <form class="form-horizontal bordered-group" role="form" action="{{ route('operation.update') }}" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">Patient</label>
+              <label class="col-sm-3 control-label">Пациент</label>
               <div class="col-sm-8">
                 <select class="form-control" name="patient_id">
                   @foreach ($patients as $patient)
@@ -162,53 +162,53 @@
             </div>
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">Operation Type</label>
+              <label class="col-sm-3 control-label">Тип услуги</label>
               <div class="col-sm-8">
                 <select class="form-control" name="operationType_id">
-                  <option value="1">T4</option>
-                  <option value="2">C.B.C</option>
+                  <option value="1">Диагностика</option>
+                  <option value="2">Стерилизация</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">Select Doctor</label>
+              <label class="col-sm-3 control-label">Проводящий врач</label>
               <div class="col-sm-8">
                 <select class="form-control" name="doctor_id">
-                  <option value="1">T4</option>
-                  <option value="2">C.B.C</option>
+                  <option value="1">Иващенко С.М.</option>
+                  <option value="2">Иванов И.К.</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">Select Seat</label>
+              <label class="col-sm-3 control-label">Выбрать палату</label>
               <div class="col-sm-8">
                 <select class="form-control" name="seat_id">
-                  <option value="1">ICU - 101</option>
-                  <option value="2">ICU - 202</option>
+                  <option value="1">Палата №4</option>
+                  <option value="2">Палата №5</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">O.T Date</label>
+              <label class="col-sm-3 control-label">Дата проведения</label>
               <div class="col-sm-8">
-                <input type="text" name="date" class="form-control" placeholder="Format : Y-M-D">
+                <input type="text" name="date" class="form-control" placeholder="формат : Y-M-D">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-3 control-label">O.T Time</label>
+              <label class="col-sm-3 control-label">Время проведения</label>
               <div class="col-sm-8">
-                <input type="text" name="time" class="form-control" placeholder="Format : H:M:S">
+                <input type="text" name="time" class="form-control" placeholder="формат : H:M:S">
               </div>
             </div>
 
             <div class="form-group clear">
-              <label class="col-sm-3 control-label">Description</label>
+              <label class="col-sm-3 control-label">Описание</label>
               <div class="col-sm-8">
-                <textarea class="form-control" rows="5" name="description"></textarea>
+                <textarea class="form-control" rows="5" name="Описание"></textarea>
               </div>
             </div>
             
