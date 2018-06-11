@@ -20,7 +20,6 @@ class DoctorController extends Controller
     		'degree'	=> 'required|max:100',
     		'gender' 	=> 'required',
     		'birthDate'	=> 'required',
-    		'charge'	=> 'required|numeric',
     		'mobile'	=> 'required|numeric',
     		'email'		=> 'required|email'
     	]);
@@ -30,7 +29,6 @@ class DoctorController extends Controller
     	$doctor->degree    = $request['degree'];
     	$doctor->gender	   = $request['gender'];
     	$doctor->birthDate = $request['birthDate'];
-    	$doctor->charge	   = $request['charge'];
     	$doctor->mobile	   = $request['mobile'];
     	$doctor->email	   = $request['email'];
     	$doctor->hAddress  = $request['hAddress'];
@@ -57,7 +55,6 @@ class DoctorController extends Controller
             'degree'    => 'required|max:100',
             'gender'    => 'required',
             'birthDate' => 'required',
-            'charge'    => 'required',
             'mobile'    => 'required',
             'email'     => 'required|email'
         ]);
@@ -68,7 +65,6 @@ class DoctorController extends Controller
         $doctor->degree    = $request['degree'];
         $doctor->gender    = $request['gender'];
         $doctor->birthDate = $request['birthDate'];
-        $doctor->charge    = $request['charge'];
         $doctor->mobile    = $request['mobile'];
         $doctor->email     = $request['email'];
         $doctor->hAddress  = $request['hAddress'];

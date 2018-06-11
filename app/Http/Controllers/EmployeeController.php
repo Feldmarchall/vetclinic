@@ -31,7 +31,6 @@ class EmployeeController extends Controller
     	$employee->degree    = $request['degree'];
     	$employee->gender	   = $request['gender'];
     	$employee->birthDate = $request['birthDate'];
-        $employee->charge    = $request['charge'];
     	$employee->mobile	   = $request['mobile'];
     	$employee->email	   = $request['email'];    	
     	$employee->hAddress  = $request['hAddress'];
@@ -70,7 +69,6 @@ class EmployeeController extends Controller
         $employee->degree    = $request['degree'];
         $employee->gender    = $request['gender'];
         $employee->birthDate = $request['birthDate'];
-        $employee->charge    = $request['charge'];
         $employee->mobile    = $request['mobile'];
         $employee->email     = $request['email'];     
         $employee->hAddress  = $request['hAddress'];
