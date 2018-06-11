@@ -10,9 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::auth();
+
+Route::get('/', 'HomeController@index');
+
+
 Route::group(['middleware' => ['web']] , function() {
 
-	Route::get('/', [
+	Route::get('/home', [
     	'uses' => 'AdminController@index',
     	'as' => 'admin.index'
 	]);
@@ -222,5 +228,3 @@ Route::group(['middleware' => ['web']] , function() {
     ]);
 
 });
-
-

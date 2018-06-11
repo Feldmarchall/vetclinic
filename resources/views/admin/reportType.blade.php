@@ -40,11 +40,11 @@
           <span class="pull-left">Vetmed</span>
         </a>
         <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Hello, {{ Auth::user()->name }}
+            </a></li>
           <li>
-            <a href="{{ route('admin.index') }}">Панель</a>
-          </li>
-          <li>
-            <a href="signin.html">Выйти</a>
+            <a href="{{ url('/logout') }}">Выйти</a>
           </li>
         </ul>
 
