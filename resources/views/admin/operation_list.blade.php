@@ -99,7 +99,7 @@
               <td><?php echo $i; ?></td>
               <td>{{ $operation->operationNo or 'Стерилизация' }}</td>
               <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
-              <div class="modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="PrintArea modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -132,6 +132,7 @@
                       </div>
                     </div>
                     <div class="modal-footer no-border">
+                      <button id="" class="btn btn-info print_button">Друкувати</button>
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
                     </div>
                   </div>
