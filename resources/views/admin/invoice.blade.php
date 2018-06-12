@@ -95,20 +95,18 @@
                 <input type="text" class="form-control" value="2" disabled>
               </div>
             </div>
-          
-          <div class="form-group">
-              <label class="col-sm-2 control-label">Заголовок расчета</label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control">
-              </div>
-            </div>
 
             <div class="form-group">
               <label class="col-sm-2 control-label">Пациент</label>
               <div class="col-sm-8">
+                {{--<select class="form-control" name="patient_type">--}}
+                  {{--<option value="1">Новый пациент</option>--}}
+                  {{--<option value="2">Госпитализированный пациент</option>--}}
+                {{--</select>--}}
                 <select class="form-control" name="patient_type">
-                  <option value="1">Новый пациент</option>
-                  <option value="2">Госпитализированный пациент</option>
+                  @foreach ($patients as $patient)
+                      <option value="{{ $patient->id }}">{{ $patient->name }}</option>
+                  @endforeach
                 </select>
               </div>
             </div>
@@ -116,7 +114,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Дата</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" data-provide="datepicker" name="Date">
+                <input type="date" class="form-control" data-provide="datepicker" name="Date">
               </div>
             </div>
 
@@ -135,43 +133,6 @@
             </div>
 
             <div class="row col-md-6 pull-right">
-      <div class="form-group form-inline">
-        <label class="col-sm-4" >Итого Услуг: &nbsp;</label>
-        <div class="input-group col-sm-6">
-          <div class="input-group-addon">Tk.</div>
-          <input name="subtotal" type="number" class="form-control" id="subTotal" placeholder="Итого Услуг">
-        </div>
-      </div>
-      <div class="form-group form-inline">
-        <label class="col-sm-4">Процент: &nbsp;</label>
-        <div class="input-group col-sm-6">
-          <div class="input-group-addon">Tk.</div>
-          <input name="percent" type="number" class="form-control" id="tax" placeholder="Процент">
-              <div class="input-group-addon">%</div>
-        </div>
-      </div>
-      {{--<div class="form-group form-inline">--}}
-        {{--<label class="col-sm-4">Percent Amount: &nbsp;</label>--}}
-        {{--<div class="input-group col-sm-6">--}}
-          {{--<div class="input-group-addon">Tk.</div>--}}
-          {{--<input name="percent_amount" type="text" class="form-control" id="taxAmount" placeholder="Percent">          --}}
-        {{--</div>--}}
-      {{--</div>--}}
-
-      {{--<div class="form-group form-inline">--}}
-        {{--<label class="col-sm-4">Without Percent: &nbsp;</label>--}}
-        {{--<div class="input-group col-sm-6">--}}
-          {{--<div class="input-group-addon">Tk.</div>--}}
-          {{--<input name="without_percent" type="text" class="form-control" id="totalAftertax" placeholder="Without Percen">--}}
-        {{--</div>--}}
-      {{--</div>--}}
-      <div class="form-group form-inline">
-        <label class="col-sm-4">Размер скидки: &nbsp;</label>
-        <div class="input-group col-sm-6">
-          <div class="input-group-addon">Tk.</div>
-          <input name="discount_amount" type="number" class="form-control" id="discount" value="0">
-        </div>
-      </div>
       <div class="form-group form-inline">
         <label class="col-sm-4"><button type="button" id="total" class="btn btn-primary">Всего</button></label>
         <div class="input-group col-sm-6">
@@ -211,36 +172,15 @@
 @section('run_custom_jquery')
 <script type="text/javascript">
   $( document ).ready(function() {
-    $(".calculate").keyup(function(){
-      var medicine = $("#medicine").val();
-      var service = $("#service").val();
-      if(medicine != "" && service != "") {
-        $("#subTotal").val(parseInt(medicine) + parseInt(service));
-      } else {
-        $("#subTotal").val("");
-      }
-    });
 
     $("#total").click(function() {
-
-      $("#taxAmount").val(function() {
-        var result = (parseFloat($("#tax").val()) *  parseFloat($("#subTotal").val()) / 100).toFixed(2)
-        if(!isFinite(result)) result = 0 ;
-        return result;
-      });
-
-      $("#totalAftertax").val(function() {
-        var result = (parseFloat($("#subTotal").val()) - parseFloat($("#taxAmount").val())).toFixed(2);
-        if(!isFinite(result)) result = 0 ;
-        return result;
-      });
-
-      $("#totalAmount").val(function() {
-        var result = (parseFloat($("#subTotal").val()) - parseFloat($("#taxAmount").val()) - parseFloat($("#discount").val())).toFixed(2);
-        if(!isFinite(result)) result = 0 ;
-        return result;
-      });
-
+        var medicine = $("#medicine").val();
+        var service = $("#service").val();
+        if(medicine != "" && service != "") {
+            $("#totalAmount").val(parseInt(medicine) + parseInt(service));
+        } else {
+            $("#totalAmount").val("");
+        }
     });
 
 });
