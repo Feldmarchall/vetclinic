@@ -105,7 +105,7 @@
               <td>{{ $patient->id }}</td>
               <td>{{ $patient->mobile }}</td>
               <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
-              <div class="modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="PrintArea modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -155,6 +155,7 @@
                       </div>
                     </div>
                     <div class="modal-footer no-border">
+                      <button id="" class="btn btn-info print_button">Друкувати</button>
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
                     </div>
                   </div>
@@ -263,7 +264,7 @@
             <div class="form-group clear">
               <label class="col-sm-3 control-label">Телефон владельца</label>
               <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="^\d{11}$" required name="mobile" name="mobile" value="{{ Request::old('mobile') ? Request::old('mobile') : isset($patient) ? $patient->mobile : '' }}">
+                <input class="form-control" type="tel" required name="mobile" name="mobile" value="{{ Request::old('mobile') ? Request::old('mobile') : isset($patient) ? $patient->mobile : '' }}">
               </div>
             </div>
 

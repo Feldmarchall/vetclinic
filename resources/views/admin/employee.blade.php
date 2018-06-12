@@ -152,7 +152,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Телефон</label>
               <div class="col-sm-8">
-                <input class="form-control" type="tel" pattern="^\d{11}$" required name="mobile" placeholder="(формат: xxx-xxx-xxx-xx)" name="mobile">
+                <input class="form-control" type="tel" required name="mobile" placeholder="(формат: xxx-xxx-xxx-xx)" name="mobile">
               </div>
             </div>
 

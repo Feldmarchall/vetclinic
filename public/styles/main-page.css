@@ -1,0 +1,5 @@
+@media print {
+    .btn-primary, .btn-info, .close {
+        display: none !important;
+    }
+}

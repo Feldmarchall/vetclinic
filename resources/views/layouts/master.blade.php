@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="{{ asset('styles/animate.css') }}">
   <link rel="stylesheet" href="{{ asset('styles/urban.css') }}">
   <link rel="stylesheet" href="{{ asset('styles/urban.skins.css') }}">
+
+  <link rel="stylesheet" href="{{ asset('styles/main-page.css') }}">
   <!-- endbuild -->
     @yield('run_custom_css_file')
     @yield('run_custom_css')
@@ -61,6 +63,10 @@
         <script src="{{ asset('vendor/flot/jquery.flot.resize.js') }}"></script>
         <script src="{{ asset('vendor/flot/jquery.flot.categories.js') }}"></script>
         <script src="{{ asset('vendor/flot/jquery.flot.categories.js') }}"></script>
+        <script src="{{ asset('scripts/ui/jquery.PrintArea.js') }}"></script>
+
+
+        <script src="{{ asset('scripts/ui/main-page.js') }}"></script>
         <!-- /page level scripts -->
 
         <!-- initialize page scripts -->
