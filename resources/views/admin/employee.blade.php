@@ -178,6 +178,15 @@
             </div>
 
             <div class="form-group">
+              <label class="col-sm-2 control-label">Статус працівника</label>
+              <div class="col-sm-8">
+                <select class="form-control" name="status">
+                  <option value="free">Вільний</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
               <label class="col-sm-2 control-label">Фотография </label>
               <div class="col-sm-8">
                 <input type="file" name="image">

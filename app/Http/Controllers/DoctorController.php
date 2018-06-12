@@ -34,6 +34,7 @@ class DoctorController extends Controller
     	$doctor->hAddress  = $request['hAddress'];
     	$doctor->oaddress  = $request['oAddress'];
     	$doctor->specialist = $request['specialist'];
+        $doctor->status = $request['status'];
         if(Input::hasFile('image')){
 
             $file = Input::file('image');
@@ -70,6 +71,7 @@ class DoctorController extends Controller
         $doctor->hAddress  = $request['hAddress'];
         $doctor->oaddress  = $request['oAddress'];
         $doctor->specialist = $request['specialist'];
+        $doctor->status =  $request['status'];
         if(Input::hasFile('image')){
 
             if($doctor->image){

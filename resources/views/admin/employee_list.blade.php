@@ -135,6 +135,9 @@
                           <p>Адрес в клинике</p>
                           <p>Домашний адрес</p>
                           <p>Фотография</p>
+                          @if ($employee->employee_type == 'doctor')
+                            <p>Статус працівника</p>
+                          @endif
                         </div>
                         <div class="col-xs-7">
                           <p> : {{ $employee->name }}</p>
@@ -154,7 +157,15 @@
                           <p> : {{ $employee->email }}</p>
                           <p> : {{ $employee->oAddress }}</p>
                           <p> : {{ $employee->hAddress }}</p>
+                          {{--<p> : {{ $doctor->status }}</p>--}}
                           <p> : <img class="img-responsive" src="{{ asset('images/employees/'.$employee->image) }}" ></p>
+                          @if ($employee->employee_type == 'doctor')
+                            @if ($employee->status == 'free')
+                              <p> : Вільний</p>
+                            @else
+                              <p> : Зайнятий</p>
+                            @endif
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -239,6 +250,18 @@
               </div>
             </div>
             @endif
+
+                        @if($employee->employee_type == 'doctor')
+                          <div class="form-group clear">
+                            <label class="col-sm-3 control-label">Статус</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" name="status">
+                                <option value="free" {{ $employee->status == 'free' ? 'selected' : ''}}>Вільний</option>
+                                <option value="busy" {{ $employee->status == 'busy' ? 'selected' : ''}}>Зайнятий</option>
+                              </select>
+                            </div>
+                          </div>
+                        @endif
 
             {{--@if($employee->charge == NULL)--}}
             {{--@else--}}

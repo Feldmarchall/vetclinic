@@ -36,6 +36,7 @@ class EmployeeController extends Controller
     	$employee->hAddress  = $request['hAddress'];
     	$employee->oaddress  = $request['oAddress'];
     	$employee->specialist = $request['specialist'];
+        $employee->status =  $request['status'];
         if(Input::hasFile('image')){
 
             $file = Input::file('image');
@@ -74,6 +75,7 @@ class EmployeeController extends Controller
         $employee->hAddress  = $request['hAddress'];
         $employee->oaddress  = $request['oAddress'];
         $employee->specialist = $request['specialist'];
+        $employee->status =  $request['status'];
         if(Input::hasFile('image')){
 
             if($employee->image){

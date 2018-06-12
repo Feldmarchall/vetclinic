@@ -108,7 +108,9 @@
               <div class="col-sm-8">
                 <select class="form-control" name="doctor_id">
                   @foreach ($doctors as $doctor)
-                    <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                    @if($doctor->status == 'free')
+                      <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                    @endif
                   @endforeach
                 </select>
               </div>
