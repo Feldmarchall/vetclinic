@@ -103,6 +103,7 @@
                   <option value="1">Анализ крови</option>
                   <option value="2">Анализ на паразиты</option>
                   <option value="3">Анализ общий</option>
+                  <option value="4">Диагностика</option>
                 </select>
               </div>
             </div>

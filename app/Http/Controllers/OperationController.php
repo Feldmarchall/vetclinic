@@ -29,7 +29,7 @@ class OperationController extends Controller
     	$operation->cost    = $request['cost'];
     	$operation->save();
 
-    	return redirect()->back()->with(['success' => 'Insert Successfully'] );
+    	return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function operationTypeupdate(Request $request)
@@ -44,7 +44,7 @@ class OperationController extends Controller
         $operation->name      = ucfirst($request['name']);
         $operation->cost    = $request['cost'];
         $operation->update();
-        return redirect()->route('operationType.list')->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('operationType.list')->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function operationTypeViewList()
@@ -62,7 +62,7 @@ class OperationController extends Controller
         }
 
         $operation->delete();
-        return redirect()->route('operationType.list')->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('operationType.list')->with(['success' => 'Информация успешно удалена !']);
 
     }
 
@@ -98,7 +98,7 @@ class OperationController extends Controller
         $operation->description    = $request['description'];
         $operation->save();
 
-        return redirect()->back()->with(['success' => 'Insert Successfully'] );
+        return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function update(Request $request)
@@ -123,7 +123,7 @@ class OperationController extends Controller
         $operation->time = $request['time'];
         $operation->description    = $request['description'];
         $operation->update();
-        return redirect()->route('operation.list')->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('operation.list')->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function viewList($operationFloor = null)
@@ -146,7 +146,7 @@ class OperationController extends Controller
             unlink($image_path);
         }
         $operation->delete();
-        return redirect()->route('operation.list')->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('operation.list')->with(['success' => 'Информация успешно удалена !']);
 
     }
 }

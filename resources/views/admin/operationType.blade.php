@@ -100,7 +100,7 @@
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-5">
-                <button type="submit" class="btn btn-success">Название услуги</button>
+                <button type="submit" class="btn btn-success">Добавить услугу</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
               </div>
             </div>

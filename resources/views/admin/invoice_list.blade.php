@@ -98,7 +98,7 @@
                                         <tr>
                                             <td><?php echo $i; ?></td>
                                             <td>{{ $invoice->patient_type }}</td>
-                                            <td>{{ $invoice->Date }} Tk.</td>
+                                            <td>{{ $invoice->Date }}</td>
                                             <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
                                             <div class="PrintArea modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                                                 <div class="modal-dialog">
@@ -127,7 +127,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer no-border">
-                                                            <button id="" class="btn btn-info print_button">Друкувати</button>
+                                                            <button id="" class="btn btn-info print_button">Печать</button>
                                                             <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
                                                         </div>
                                                     </div>

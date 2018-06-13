@@ -72,7 +72,7 @@ class InvoiceController extends Controller
         }
 
         $invoice->delete();
-        return redirect()->route('invoice.list')->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('invoice.list')->with(['success' => 'Информация успешно удалена !']);
 
     }
 

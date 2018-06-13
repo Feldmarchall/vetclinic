@@ -125,7 +125,7 @@
       <div class="form-group form-inline">
         <label class="col-sm-4"><button type="button" id="total" class="btn btn-primary">Всего</button></label>
         <div class="input-group col-sm-6">
-          <div class="input-group-addon">Tk.</div>
+          <div class="input-group-addon"></div>
           <input name="total_paid" type="number" class="form-control" id="totalAmount" placeholder="Всего">
         </div>
       </div>

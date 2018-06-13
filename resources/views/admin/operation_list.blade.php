@@ -132,7 +132,7 @@
                       </div>
                     </div>
                     <div class="modal-footer no-border">
-                      <button id="" class="btn btn-info print_button">Друкувати</button>
+                      <button id="" class="btn btn-info print_button">Печать</button>
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
                     </div>
                   </div>

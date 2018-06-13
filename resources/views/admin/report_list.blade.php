@@ -117,7 +117,7 @@
                           <p>Фотография</p>
                         </div>
                         <div class="col-xs-7">
-                          <p> : {{ $report->name or 'Диагностика' }}</p>
+                          <p> : {{ $report->name or 'Диагностика'}}</p>
                           <p> : {{ $report->cost or '200' }}</p>
                           <p> : {{ $report->description }}</p>
                           <p> : {{ $report->patient_id }}</p>
@@ -126,7 +126,7 @@
                       </div>
                     </div>
                     <div class="modal-footer no-border">
-                      <button id="" class="btn btn-info print_button">Друкувати</button>
+                      <button id="" class="btn btn-info print_button">Печать</button>
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                   </div>

@@ -26,7 +26,7 @@ class ReportController extends Controller
     	$report->cost    = $request['cost'];
     	$report->save();
 
-    	return redirect()->back()->with(['success' => 'Insert Successfully'] );
+    	return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function reportTypeupdate(Request $request)
@@ -41,7 +41,7 @@ class ReportController extends Controller
         $report->name      = ucfirst($request['name']);
         $report->cost    = $request['cost'];
         $report->update();
-        return redirect()->route('reportType.list')->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('reportType.list')->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function reportTypeViewList()
@@ -59,7 +59,7 @@ class ReportController extends Controller
         }
 
         $report->delete();
-        return redirect()->route('reportType.list')->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('reportType.list')->with(['success' => 'Информация успешно удалена !']);
 
     }
 
@@ -93,7 +93,7 @@ class ReportController extends Controller
         }
         $report->save();
 
-        return redirect()->back()->with(['success' => 'Insert Successfully'] );
+        return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function update(Request $request)
@@ -123,7 +123,7 @@ class ReportController extends Controller
             $report->type = $file->getClientMimeType();
         }
         $report->update();
-        return redirect()->route('report.list')->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('report.list')->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function viewList($reportFloor = null)
@@ -143,7 +143,7 @@ class ReportController extends Controller
             unlink($image_path);
         }
         $report->delete();
-        return redirect()->route('report.list')->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('report.list')->with(['success' => 'Информация успешно удалена !']);
 
     }
 }
