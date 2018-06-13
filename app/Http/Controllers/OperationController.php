@@ -129,11 +129,6 @@ class OperationController extends Controller
     public function viewList($operationFloor = null)
     {
         $operation = Operation::orderBy('created_at' , 'desc')->paginate(50);
-
-//        echo '<pre>';
-//        var_dump(Operation::orderBy('created_at' , 'desc')->get()->toArray());  // <---- or toJson()
-//        echo '</pre>';
-//        die();
         $patient = Patient::orderBy('created_at' , 'desc')->get();
         $doctor = Employee::orderBy('created_at' , 'desc')->where('employee_type' , 'doctor')->get();
         $seat = Seat::orderBy('created_at' , 'desc')->where('status' , 'empty')->get();

@@ -87,25 +87,14 @@
         </div>
       @endif
       
-    <form class="form-horizontal bordered-group" role="form" action="" method="post" enctype="multipart/form-data">
-
-          <div class="form-group">
-              <label class="col-sm-2 control-label">ID</label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" value="2" disabled>
-              </div>
-            </div>
+    <form class="form-horizontal bordered-group" role="form" action="{{ route('invoice.save') }}" method="post">
 
             <div class="form-group">
               <label class="col-sm-2 control-label">Пациент</label>
               <div class="col-sm-8">
-                {{--<select class="form-control" name="patient_type">--}}
-                  {{--<option value="1">Новый пациент</option>--}}
-                  {{--<option value="2">Госпитализированный пациент</option>--}}
-                {{--</select>--}}
                 <select class="form-control" name="patient_type">
                   @foreach ($patients as $patient)
-                      <option value="{{ $patient->id }}">{{ $patient->name }}</option>
+                      <option value="{{ $patient->name }}">{{ $patient->name }}</option>
                   @endforeach
                 </select>
               </div>
@@ -144,8 +133,8 @@
       <div class="form-group">        
       <label class="col-sm-4"></label>  
       <div class="input-group col-sm-6">
-      <input type=submit name="invoice" value="Добавить бланк" class="btn btn-success btn-lg btn-block">
-      <input type="hidden" name="_token" value="{{ Session::token() }}">
+          <button type=submit class="btn btn-success btn-lg btn-block">Добавить бланк</button>
+          <input type="hidden" name="_token" value="{{ Session::token() }}">
       </div>
      
       </div>

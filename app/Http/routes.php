@@ -158,7 +158,34 @@ Route::group(['middleware' => ['web']] , function() {
 		'as' => 'operationType.list'
 	]);
 
-	//operation
+    // invoice
+
+    Route::get('/invoice' , [
+        'uses' => 'InvoiceController@getIndex',
+        'as' => 'admin.invoice'
+    ]);
+
+    Route::post('/invoice/save' , [
+        'uses' => 'InvoiceController@save',
+        'as' => 'invoice.save'
+    ]);
+
+    Route::post('/invoice/update' , [
+        'uses' => 'InvoiceController@update',
+        'as' => 'invoice.update'
+    ]);
+
+    Route::get('/invoice/delete' , [
+        'uses' => 'InvoiceController@delete',
+        'as' => 'invoice.delete'
+    ]);
+
+    Route::get('/invoice/viewlist' , [
+        'uses' => 'InvoiceController@viewList',
+        'as' => 'invoice.list'
+    ]);
+
+    //operation
 
 	Route::get('/operation' , [
 		'uses' => 'Operationcontroller@getIndex',
@@ -210,11 +237,6 @@ Route::group(['middleware' => ['web']] , function() {
 	Route::get('/patient/{patient?}/list' , [
 		'uses' => 'PatientController@viewList',
 		'as' => 'patient.list'
-	]);
-
-	Route::get('/invoice' , [
-		'uses' => 'InvoiceController@invoice',
-		'as' => 'admin.invoice'
 	]);
 
     Route::get('/api/patient_search' , [

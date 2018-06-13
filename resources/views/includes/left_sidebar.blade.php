@@ -219,7 +219,7 @@
                 </a>
               </li>            
               <li>
-                <a href="">
+                <a href="{{ route('invoice.list') }}">
                   <span>Список бланков</span>
                 </a>
               </li>
