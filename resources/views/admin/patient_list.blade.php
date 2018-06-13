@@ -217,7 +217,7 @@
             </div>
 
             <div class="form-group clear">
-              <label class="col-sm-3 control-label">Blood Group</label>
+              <label class="col-sm-3 control-label">Группа крови</label>
               <div class="col-sm-8">
                 <select class="form-control" name="bloodGroup">
                   <option value="A+" {{ $patient->bloodGroup == 'A+' ? 'selected' : ''}}>A+</option>
