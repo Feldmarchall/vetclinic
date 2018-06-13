@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="55a8a65c-2d67-4312-b258-9f36f4555a84" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/employees/25335.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/employees/Dog_PNG_Clip_Art-1430.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SeatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SeatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic-system.sql" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-system.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/employees/1111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/employees/IMG_20151126_112617.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employee.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employee.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/employee_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employee_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/seat_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/seat_list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/left_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/left_sidebar.blade.php" afterDir="false" />
     </list>
     <ignored path="hospital.iws" />
@@ -31,34 +33,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="employee.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/employee.blade.php">
+      <file leaf-file-name="seat_list.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/seat_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="92" column="42" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="42" />
+            <state relative-caret-position="524">
+              <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee_list.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/employee_list.blade.php">
+      <file leaf-file-name="SeatController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SeatController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
-              <folding>
-                <marker date="1528925282233" expanded="true" signature="2157:2176" ph="..." />
-              </folding>
+            <state relative-caret-position="1887">
+              <caret line="96" column="125" selection-start-line="96" selection-start-column="125" selection-end-line="96" selection-end-column="125" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
+      <file leaf-file-name="PatientController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="112" column="112" selection-start-line="112" selection-start-column="112" selection-end-line="112" selection-end-column="112" />
+            <state relative-caret-position="624">
+              <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding>
-                <element signature="e#41#69#0#PHP" expanded="true" />
+                <element signature="e#41#58#0#PHP" expanded="true" />
+                <marker date="1528926434453" expanded="true" signature="262:513" ph="..." />
+                <marker date="1528926434453" expanded="true" signature="263:513" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,9 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>deta</find>
-      <find>details</find>
-      <find>PrintArea</find>
       <find>doctor</find>
       <find>Врач</find>
       <find>Редактировать информацию</find>
@@ -105,12 +103,16 @@
       <find>Услуги клиники</find>
       <find>CsrfToken</find>
       <find>Orthopedics</find>
+      <find>Lab Staff</find>
+      <find>Список обслуживающего персонала</find>
       <find>employee_type</find>
+      <find>Empty</find>
     </findStrings>
     <replaceStrings>
       <replace>Vetmed</replace>
       <replace>Информация о пациентах</replace>
       <replace>ID пациента</replace>
+      <replace>LabStaff</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\OpenServer\domains\clinic-system\html-view\vendor</dir>
@@ -119,8 +121,8 @@
       <dir>C:\OpenServer\domains\clinic-system\storage\framework\views</dir>
       <dir>C:\OpenServer\domains\clinic-system\app</dir>
       <dir>C:\OpenServer\domains\clinic-system\resources\views\admin</dir>
-      <dir>C:\OpenServer\domains\clinic-system\resources\views</dir>
       <dir>C:\OpenServer\domains\clinic-system</dir>
+      <dir>C:\OpenServer\domains\clinic-system\resources\views</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -132,7 +134,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/doctor.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PatientController.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/a05ecc66f2206e16c6a0e4cfb62cee1213c817fe.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/seat.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/report.blade.php" />
@@ -148,8 +149,6 @@
         <option value="$PROJECT_DIR$/public/scripts/ui/main-page.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/operation_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/report_list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/seat_list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/employee.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/operation.blade.php" />
         <option value="$PROJECT_DIR$/app/Invoise.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OperationController.php" />
@@ -158,10 +157,14 @@
         <option value="$PROJECT_DIR$/resources/views/admin/patient_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/invoice.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/invoice_list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/left_sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/employee_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/employee.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/left_sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/seat_list.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SeatController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PatientController.php" />
       </list>
     </option>
   </component>
@@ -341,25 +344,30 @@
             <path>
               <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="employees" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
@@ -371,6 +379,13 @@
               <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clinic-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clinic-system" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -435,7 +450,7 @@
       <workItem from="1526895563786" duration="133000" />
       <workItem from="1526895724271" duration="15064000" />
       <workItem from="1528829152251" duration="10760000" />
-      <workItem from="1528914023210" duration="10148000" />
+      <workItem from="1528914023210" duration="11301000" />
     </task>
     <task id="LOCAL-00001" summary="continue translation">
       <created>1526926859967</created>
@@ -493,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528921352411</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add info">
+      <created>1528925418980</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1528925418980</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64998000" />
+    <option name="totallyTimeSpent" value="66151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -511,7 +533,7 @@
       <window_info id="npm" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3278302" />
       <window_info id="Gulp" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21440129" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21440129" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -598,7 +620,8 @@
     <MESSAGE value="add print script to all pages" />
     <MESSAGE value="add doctor status and planning operations" />
     <MESSAGE value="fix invoice structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix invoice structure" />
+    <MESSAGE value="add info" />
+    <option name="LAST_COMMIT_MESSAGE" value="add info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -606,37 +629,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Patient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="110" column="113" selection-start-line="110" selection-start-column="104" selection-end-line="110" selection-end-column="113" />
-          <folding>
-            <element signature="e#41#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/report.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="121" column="77" selection-start-line="121" selection-start-column="77" selection-end-line="121" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/reportType.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="88" column="96" selection-start-line="88" selection-start-column="96" selection-end-line="88" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/operationType.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -830,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/seat_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="100" column="42" lean-forward="true" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/invoice.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -884,13 +869,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/employees/2013-05-30 11.53.41.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/left_sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -904,6 +882,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/employees/Dog_PNG_Clip_Art-1430.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/left_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="110" column="18" lean-forward="true" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/employee.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
@@ -914,22 +909,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/employees/Dog_PNG_Clip_Art-1430.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/employee.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/employee_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="92" column="42" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="42" />
+        <state relative-caret-position="1982">
+          <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
+          <folding>
+            <marker date="1528925445400" expanded="true" signature="2157:2176" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/employee_list.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/seat_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
+        <state relative-caret-position="524">
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SeatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="96" column="125" selection-start-line="96" selection-start-column="125" selection-end-line="96" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_06_161105_create_patients_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_06_032821_create_seats_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding>
-            <marker date="1528925282233" expanded="true" signature="2157:2176" ph="..." />
+            <element signature="e#41#58#0#PHP" expanded="true" />
+            <marker date="1528926434453" expanded="true" signature="262:513" ph="..." />
+            <marker date="1528926434453" expanded="true" signature="263:513" ph="..." />
           </folding>
         </state>
       </provider>

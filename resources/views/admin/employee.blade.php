@@ -90,7 +90,7 @@
                   <option value="doctor">Врач</option>
                   <option value="nurse">Медсестра</option>
                   <option value="accountant">Администратор</option>
-                  <option value="Lab Staff">Лаботант</option>
+                  <option value="LabStaff">Лаботант</option>
                   {{--<option value="pharmacist">Pharmacist</option>--}}
                 </select>
               </div>

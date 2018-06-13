@@ -107,7 +107,7 @@
                 {{ $employee->employee_type == 'doctor' ? 'Врач' : ''}}
                 {{ $employee->employee_type == 'nurse' ? 'Медсестра' : ''}}
                 {{ $employee->employee_type == 'accountant' ? 'Администратор' : ''}}
-                {{ $employee->employee_type == 'Lab Staff' ? 'Лаборант' : ''}}
+                {{ $employee->employee_type == 'LabStaff' ? 'Лаборант' : ''}}
               </td>
               <td>{{ $employee->mobile }}</td>
               <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
@@ -210,7 +210,7 @@
                   <option value="doctor" {{ $employee->employee_type == 'doctor' ? 'selected' : ''}}>Врач</option>
                   <option value="nurse" {{ $employee->employee_type == 'nurse' ? 'selected' : ''}}>Медсестра</option>
                   <option value="accountant" {{ $employee->employee_type == 'accountant' ? 'selected' : ''}}>Администратор</option>
-                  <option value="Lab Staff" {{ $employee->employee_type == 'Lab Staff' ? 'selected' : ''}}>Лаборант</option>
+                  <option value="LabStaff" {{ $employee->employee_type == 'LabStaff' ? 'selected' : ''}}>Лаборант</option>
 
                 </select>
               </div>

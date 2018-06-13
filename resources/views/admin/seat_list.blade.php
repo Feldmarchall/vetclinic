@@ -99,7 +99,10 @@
               <tr>
               <td><?php echo $i; ?></td>
               <td>{{ $seat->seatNo }}</td>
-              <td>{{ ucfirst($seat->status) }}</td>
+              <td>
+                {{ $seat->status == 'empty' ? 'Свободная' : ''}}
+                {{ $seat->status == 'full' ? 'Занятая' : ''}}
+              </td>
               <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
               <div class="PrintArea modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
@@ -122,9 +125,15 @@
                         <div class="col-xs-7">
                           <p> : {{ $seat->seatNo }}</p>
                           <p> : {{ ucfirst($seat->seatFloor) }}</p>
-                          <p> : {{ $seat->rent }}/- Tk.</p>
-                          <p> : {{ ucfirst($seat->seatType) }}</p>
-                          <p> : {{ $seat->status }}</p>
+                          <p> : {{ $seat->rent }}</p>
+                          <p> :
+                            {{ $seat->seatType == 'general' ? 'Общая' : ''}}
+                            {{ $seat->seatType == 'cabin' ? 'Индивидуальная' : ''}}
+                          </p>
+                          <p> :
+                            {{ $seat->status == 'empty' ? 'Свободная' : ''}}
+                            {{ $seat->status == 'full' ? 'Занятая' : ''}}
+                          </p>
                           <p> : <img class="img-responsive" src="{{ asset('images/seats/'.$seat->image) }}" ></p>
                         </div>
                       </div>

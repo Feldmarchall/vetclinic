@@ -40,7 +40,7 @@ class SeatController extends Controller
         }
     	$seat->save();
 
-    	return redirect()->back()->with(['success' => 'Insert Successfully'] );
+    	return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function update(Request $request)
@@ -74,7 +74,7 @@ class SeatController extends Controller
             $seat->type = $file->getClientMimeType();
         }
         $seat->update();
-        return redirect()->route('seat.list' , ['seat' => $seat->seatFloor])->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('seat.list' , ['seat' => $seat->seatFloor])->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function viewList($seatFloor = null)
@@ -94,7 +94,7 @@ class SeatController extends Controller
             unlink($image_path);
         }
         $seat->delete();
-        return redirect()->route('seat.list' , ['seat' => $seat->seatFloor ])->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('seat.list' , ['seat' => $seat->seatFloor ])->with(['success' => 'Информация успешно удалена !']);
 
     }
 }

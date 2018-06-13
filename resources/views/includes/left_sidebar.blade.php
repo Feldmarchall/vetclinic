@@ -108,11 +108,6 @@
                   <span>Список лаборантов</span>
                 </a>
               </li>
-              <li>
-                <a href="{{ route('employee.list' , ['employee' => 'pharmacist']) }}">
-                  <span>Список обслуживающего персонала</span>
-                </a>
-              </li>
              </ul>
             </li>
           <!-- /employee -->

@@ -54,7 +54,7 @@ INSERT INTO `employees` (`id`, `created_at`, `updated_at`, `employee_type`, `nam
 (1, '2018-05-20 17:43:22', '2018-05-20 18:00:03', 'doctor', 'Doc   ', '12 ', 'Male', '2018-05-18   ', 'medicine', 2, 2147483647, 'njaaav@gmail.com', 'sdfgsdg   ', 'sdgsdg   ', '', '', ''),
 (2, '2018-05-20 18:04:01', '2018-05-20 18:04:01', 'nurse', 'Nurse', '1', 'Female', '2018-05-19', 'medicine', 3, 2147483647, 'njaaav@gmail.com', 'dsfh', 'dfhdh', '', '', ''),
 (3, '2018-05-20 18:04:34', '2018-05-20 18:04:34', 'accountant', 'Dfhd', '3', 'Male', '2018-05-13', 'neurologiest', 4, 2147483647, 'njaaav@gmail.com', 'rfy', 'dfjh', '', '', ''),
-(4, '2018-05-20 18:05:21', '2018-05-20 18:05:21', 'Lab Staff', 'Lab', '5737', 'Female', '2018-05-13', 'medicine', 3, 2147483647, 'njaaav@gmail.com', 'fgj', 'fgj', '', '', '');
+(4, '2018-05-20 18:05:21', '2018-05-20 18:05:21', 'LabStaff', 'Lab', '5737', 'Female', '2018-05-13', 'medicine', 3, 2147483647, 'njaaav@gmail.com', 'fgj', 'fgj', '', '', '');
 
 -- --------------------------------------------------------
 
