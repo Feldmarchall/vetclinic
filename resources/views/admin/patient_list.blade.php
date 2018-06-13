@@ -121,7 +121,7 @@
                           <p>ID пациента</p>
                           <p>Пол</p>
                           <p>Дата рождения</p>
-                          <p>Blood Group</p>
+                          <p>Группа крови</p>
                           <p>Симптомы</p>
                           <p>Лечащий врач</p>
                           <p>Время поступления</p>
@@ -140,7 +140,10 @@
                                 @endif
                           </p>
                           <p> : {{ $patient->id or '101' }}</p>
-                          <p> : {{ $patient->gender }}</p>
+                          <p> :
+                            {{ $patient->gender == 'Male' ? 'Мужской  ' : ''}}
+                            {{ $patient->gender == 'Female' ? 'Женский  ' : ''}}
+                          </p>
                           <p> : {{ $patient->birthDate }}</p>
                           <p> : {{ $patient->bloodGroup }}</p>
                           <p> : {{ $patient->symptoms }}</p>

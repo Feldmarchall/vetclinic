@@ -89,6 +89,9 @@
                 <select class="form-control" name="patient_id">
                   <option value="1">Барбос</option>
                   <option value="2">Хан</option>
+                  <option value="3">Барсик</option>
+                  <option value="4">Мурка</option>
+                  <option value="5">Хан</option>
                 </select>
               </div>
             </div>
@@ -97,8 +100,9 @@
               <label class="col-sm-2 control-label">Тип услуги</label>
               <div class="col-sm-8">
                 <select class="form-control" name="reportType_id">
-                  <option value="1">Диагностика</option>
-                  <option value="2">Стерилизапция</option>
+                  <option value="1">Анализ крови</option>
+                  <option value="2">Анализ на паразиты</option>
+                  <option value="3">Анализ общий</option>
                 </select>
               </div>
             </div>

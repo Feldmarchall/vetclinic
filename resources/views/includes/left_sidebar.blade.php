@@ -68,11 +68,11 @@
                   <span>Госпитализированные пациенты</span>
                 </a>
               </li>
-              <li>
-                <a href="{{ route('patient.list' , ['patient' => 'admit']) }}">
-                  <span>Новые пациенты</span>
-                </a>
-              </li>
+              {{--<li>--}}
+                {{--<a href="{{ route('patient.list' , ['patient' => 'admit']) }}">--}}
+                  {{--<span>Новые пациенты</span>--}}
+                {{--</a>--}}
+              {{--</li>--}}
              </ul>
             </li>
 

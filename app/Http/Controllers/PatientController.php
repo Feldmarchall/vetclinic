@@ -54,7 +54,7 @@ class PatientController extends Controller
         }
     	$patient->save();
 
-    	return redirect()->back()->with(['success' => 'Insert Successfully'] );
+    	return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function update(Request $request)
@@ -96,7 +96,7 @@ class PatientController extends Controller
             $patient->type = $file->getClientMimeType();
         }
         $patient->update();
-        return redirect()->route('patient.list' , ['patient' => $patient->patient_type])->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('patient.list' , ['patient' => $patient->patient_type])->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function viewList($patient_type = null)
@@ -122,7 +122,7 @@ class PatientController extends Controller
             unlink($image_path);
         }
         $patient->delete();
-        return redirect()->route('patient.list' , ['patient' => $patient->patient_type ])->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('patient.list' , ['patient' => $patient->patient_type ])->with(['success' => 'Информация успешно удалена !']);
 
     }
 }
