@@ -147,23 +147,23 @@
           <li>
             <a href="javascript:;">
               <i class="fa fa-map-marker"></i>
-              <span>Услуги клиники</span>
+              <span>Анализы клиники</span>
               {{-- <span class="label label-success pull-right">2</span> --}}
             </a>
             <ul class="sub-menu">
               <li>
                 <a href="{{ route('report.index') }}">
-                  <span>Создать услугу</span>
+                  <span>Создать анализ</span>
                 </a>
               </li>
               <li>
                 <a href="{{ route('report.list') }}">
-                  <span>Список услуг</span>
+                  <span>Список анализов</span>
                 </a>
               </li>
               <li>
                 <a href="{{ route('reportType.index') }}">
-                  <span>Создать новый тип услуги</span>
+                  <span>Создать новый тип анализа</span>
                 </a>
               </li>
               <li>

@@ -46,7 +46,7 @@ class DoctorController extends Controller
         }
     	$doctor->save();
 
-    	return redirect()->back()->with(['success' => 'Insert Successfully'] );
+    	return redirect()->back()->with(['success' => 'Информация успешно добавлена'] );
     }
 
     public function update(Request $request)
@@ -86,7 +86,7 @@ class DoctorController extends Controller
             $doctor->type = $file->getClientMimeType();
         }
         $doctor->update();
-        return redirect()->route('doctor.list')->with(['success' => 'Updated Successfully'] );
+        return redirect()->route('doctor.list')->with(['success' => 'Информация успешно изменена'] );
     }
 
     public function viewList()
@@ -106,7 +106,7 @@ class DoctorController extends Controller
             unlink($image_path);
         }
         $doctor->delete();
-        return redirect()->route('doctor.list')->with(['success' => 'Deleted Information Successfully !']);
+        return redirect()->route('doctor.list')->with(['success' => 'Информация успешно удалена !']);
 
     }
 }

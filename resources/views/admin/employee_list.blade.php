@@ -103,7 +103,12 @@
               <tr>
               <td><?php echo $i; ?></td>
               <td>{{ $employee->name }}</td>
-              <td>{{ ucfirst($employee->employee_type) }}</td>
+              <td>
+                {{ $employee->employee_type == 'doctor' ? 'Врач' : ''}}
+                {{ $employee->employee_type == 'nurse' ? 'Медсестра' : ''}}
+                {{ $employee->employee_type == 'accountant' ? 'Администратор' : ''}}
+                {{ $employee->employee_type == 'Lab Staff' ? 'Лаборант' : ''}}
+              </td>
               <td>{{ $employee->mobile }}</td>
               <td><a data-toggle="modal" data-target="#details<?php echo $i; ?>" href=""><button type="button" class="btn btn-success">Просмотреть</button></a></td>
               <div class="PrintArea modal" id="details<?php echo $i; ?>" tabindex="-1" role="dialog" aria-hidden="true">
@@ -121,7 +126,7 @@
                           <p>Позиция</p>
                           @if($employee->specialist == '1')
                           @else
-                            <p>Должность</p>
+                            <p>Специализация</p>
                           @endif
                           {{--@if($employee->charge == NULL)--}}
                           {{--@else--}}
@@ -141,17 +146,26 @@
                         </div>
                         <div class="col-xs-7">
                           <p> : {{ $employee->name }}</p>
-                          <p> : {{ ucfirst($employee->employee_type) }}</p>
+                          <p> :
+                            {{ $employee->employee_type == 'doctor' ? 'Врач' : $employee->employee_type}}
+                          </p>
                           @if($employee->specialist == '1')
                           @else
-                            <p> : {{ ucfirst($employee->specialist) }}</p>
+                            <p> :
+                              {{ $employee->specialist == 'medicine' ? 'Терапевния' : ''}}
+                              {{ $employee->specialist == 'orthopedics' ? 'Диагностика' : ''}}
+                              {{ $employee->specialist == 'neurologiest' ? 'Стационар' : ''}}
+                            </p>
                           @endif
                           @if($employee->charge == NULL)
                           @else
                             <p> : {{ ucfirst($employee->charge) }}</p>
                           @endif
                           <p> : {{ $employee->degree }}</p>
-                          <p> : {{ $employee->gender }}</p>
+                          <p> :
+                            {{ $employee->gender == 'Male' ? 'Мужской  ' : ''}}
+                            {{ $employee->gender == 'Female' ? 'Женский  ' : ''}}
+                          </p>
                           <p> : {{ $employee->birthDate }}</p>
                           <p> : {{ $employee->mobile }}</p>
                           <p> : {{ $employee->email }}</p>
@@ -196,7 +210,6 @@
                   <option value="doctor" {{ $employee->employee_type == 'doctor' ? 'selected' : ''}}>Врач</option>
                   <option value="nurse" {{ $employee->employee_type == 'nurse' ? 'selected' : ''}}>Медсестра</option>
                   <option value="accountant" {{ $employee->employee_type == 'accountant' ? 'selected' : ''}}>Администратор</option>
-                  {{--<option value="pharmacist" {{ $employee->employee_type == 'pharmacist' ? 'selected' : ''}}>Pharmacist</option>--}}
                   <option value="Lab Staff" {{ $employee->employee_type == 'Lab Staff' ? 'selected' : ''}}>Лаборант</option>
 
                 </select>
@@ -243,9 +256,9 @@
               <label class="col-sm-3 control-label">Специализация</label>
               <div class="col-sm-8">
                 <select class="form-control" name="specialist">
-                  <option value="medicine" {{ $employee->specialist == 'medicine' ? 'selected' : ''}}>Терапевния</option>
-                  <option value="orthopedics" {{ $employee->specialist == 'orthopedics' ? 'selected' : ''}}>Диагностика</option>
-                  <option value="neurologiest" {{ $employee->specialist == 'neurologiest' ? 'selected' : ''}}>Стационар</option>
+                  <option value="medicine" {{ $employee->specialist == 'medicine' ? 'Терапевния' : 'Терапевния'}}>Терапевния</option>
+                  <option value="orthopedics" {{ $employee->specialist == 'orthopedics' ? 'Диагностика' : 'Диагностика'}}>Диагностика</option>
+                  <option value="neurologiest" {{ $employee->specialist == 'neurologiest' ? 'Стационар' : 'Стационар'}}>Стационар</option>
                 </select>
               </div>
             </div>
