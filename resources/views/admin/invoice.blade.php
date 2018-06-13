@@ -45,7 +45,6 @@
         </a>
         <ul class="dropdown-menu">
           <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Hello, {{ Auth::user()->name }}
             </a></li>
           <li>
             <a href="{{ url('/logout') }}">Выйти</a>
